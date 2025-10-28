@@ -29,7 +29,7 @@ public class BatchCreator {
 	
 	public void createScript() throws IOException {
 		String home = System.getenv("USERPROFILE");
-		String file = util.toScan(reader, "Insert the scripts' name");
+		String file = util.toScan(reader, "Insert the script name");
 		String path = home + "\\" + file + ".bat";
 		try(BufferedWriter writer = new BufferedWriter(new FileWriter(path))) {
 			writer.write("@echo off");
